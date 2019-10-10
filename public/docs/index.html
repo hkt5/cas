@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_669c21a0ec50102c5d7a38fdaec7d34e -->
+<h2>Register user.</h2>
+<p>[ Register new user. ]</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "/register" \
+    -H "Content-Type: application/json" \
+    -d '{"first_name":"et","last_name":"quos","email":"et","phone":"ut","password":"qui"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("/register");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "first_name": "et",
+    "last_name": "quos",
+    "email": "et",
+    "phone": "ut",
+    "password": "qui"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "content": "eyJmaXJzdF9uYW1lIjoiSm9obiIsImxhc3RfbmFtZSI6IkRvZSIsImVtYWlsIjoiam9obkBkb2UuY29tIiwicGhvbmUiOiIwMDAtMDAwLTAwMCIsImlzX2FkbWluIjpmYWxzZSwiaXNfY29uZmlybWVkIjpmYWxzZSwiY29uZmlybWF0aW9uX2xpbmsiOiJ0cTE2NzJpMzhvIiwiaXNfYWN0aXZlIjpmYWxzZSwibGFzdF9sb3N0X3Bhc3N3b3JkX2xpbmsiOiJmYWVrOXc1bXljIiwibGFzdF9wYXNzd29yZF9tb2RpZmljYXRpb24iOiIyMDE5LTEwLTAyVDEwOjA4OjMxLjUyMTgzMFoiLCJiYWRfbG9naW4iOjAsInVwZGF0ZWRfYXQiOiIyMDE5LTEwLTAyIDEwOjA4OjMxIiwiY3JlYXRlZF9hdCI6IjIwMTktMTAtMDIgMTA6MDg6MzEiLCJpZCI6Mn0=",
+    "error_messages": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST /register</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>first_name</td>
+<td>string</td>
+<td>required</td>
+<td>First name of new user.</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>string</td>
+<td>required</td>
+<td>Last name of new user.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>email</td>
+<td>required</td>
+<td>Email of new user.</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>required</td>
+<td>Phone of new user.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>required</td>
+<td>Password of new user.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_669c21a0ec50102c5d7a38fdaec7d34e -->
+<!-- START_3c93c2debeebd51606066efaf55cd95d -->
+<h2>Login with phone.</h2>
+<p>[ Login user with phone and password. ]</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "/loginWithEmail" \
+    -H "Content-Type: application/json" \
+    -d '{"phone":"optio","password":"et"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("/loginWithEmail");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "phone": "optio",
+    "password": "et"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "content": "eyJmaXJzdF9uYW1lIjoiSm9obiIsImxhc3RfbmFtZSI6IkRvZSIsImVtYWlsIjoiam9obkBkb2UuY29tIiwicGhvbmUiOiIwMDAtMDAwLTAwMCIsImlzX2FkbWluIjpmYWxzZSwiaXNfY29uZmlybWVkIjpmYWxzZSwiY29uZmlybWF0aW9uX2xpbmsiOiJ0cTE2NzJpMzhvIiwiaXNfYWN0aXZlIjpmYWxzZSwibGFzdF9sb3N0X3Bhc3N3b3JkX2xpbmsiOiJmYWVrOXc1bXljIiwibGFzdF9wYXNzd29yZF9tb2RpZmljYXRpb24iOiIyMDE5LTEwLTAyVDEwOjA4OjMxLjUyMTgzMFoiLCJiYWRfbG9naW4iOjAsInVwZGF0ZWRfYXQiOiIyMDE5LTEwLTAyIDEwOjA4OjMxIiwiY3JlYXRlZF9hdCI6IjIwMTktMTAtMDIgMTA6MDg6MzEiLCJpZCI6Mn0=",
+    "error_messages": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST /loginWithEmail</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>phone</td>
+<td>string</td>
+<td>required</td>
+<td>Phone of user.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>required</td>
+<td>Password of user.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_3c93c2debeebd51606066efaf55cd95d -->
+<!-- START_20ecff2fdb01a559f742fbd2d775cc82 -->
+<h2>Login with email.</h2>
+<p>[ Login user with e-mail and password. ]</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "/loginWithPhone" \
+    -H "Content-Type: application/json" \
+    -d '{"email":"officiis","password":"sint"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL("/loginWithPhone");
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+}
+
+let body = {
+    "email": "officiis",
+    "password": "sint"
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+    body: body
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "content": "eyJmaXJzdF9uYW1lIjoiSm9obiIsImxhc3RfbmFtZSI6IkRvZSIsImVtYWlsIjoiam9obkBkb2UuY29tIiwicGhvbmUiOiIwMDAtMDAwLTAwMCIsImlzX2FkbWluIjpmYWxzZSwiaXNfY29uZmlybWVkIjpmYWxzZSwiY29uZmlybWF0aW9uX2xpbmsiOiJ0cTE2NzJpMzhvIiwiaXNfYWN0aXZlIjpmYWxzZSwibGFzdF9sb3N0X3Bhc3N3b3JkX2xpbmsiOiJmYWVrOXc1bXljIiwibGFzdF9wYXNzd29yZF9tb2RpZmljYXRpb24iOiIyMDE5LTEwLTAyVDEwOjA4OjMxLjUyMTgzMFoiLCJiYWRfbG9naW4iOjAsInVwZGF0ZWRfYXQiOiIyMDE5LTEwLTAyIDEwOjA4OjMxIiwiY3JlYXRlZF9hdCI6IjIwMTktMTAtMDIgMTA6MDg6MzEiLCJpZCI6Mn0=",
+    "error_messages": null
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST /loginWithPhone</code></p>
+<h4>Body Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>email</td>
+<td>required</td>
+<td>Email of user.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>required</td>
+<td>Password of user.</td>
+</tr>
+</tbody>
+</table>
+<!-- END_20ecff2fdb01a559f742fbd2d775cc82 -->
+<!-- START_bf1f5057be9939c7e0ef91a51e92d8c0 -->
+<h2>Authorize user.</h2>
+<p>[ This request must contans X-AUTH header. ]</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "/auth" </code></pre>
+<pre><code class="language-javascript">const url = new URL("/auth");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "content": [],
+    "error_messages": []
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET /auth</code></p>
+<!-- END_bf1f5057be9939c7e0ef91a51e92d8c0 -->
+<!-- START_06f1c2988f7abe05be737c719394c0c4 -->
+<h2>Confirm account.</h2>
+<p>[ Confirm your account with confirmation link. ]</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "/confirmAccount/1" </code></pre>
+<pre><code class="language-javascript">const url = new URL("/confirmAccount/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response =&gt; response.json())
+    .then(json =&gt; console.log(json));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "content": {
+        "user": {
+            "id": 1,
+            "first_name": "Jane",
+            "last_name": "Doe",
+            "email": "jane@doe.com",
+            "phone": "000-000-001",
+            "is_admin": 0,
+            "is_confirmed": true,
+            "confirmation_link": "en0m3kthb1",
+            "is_active": true,
+            "last_lost_password_link": "imjrszoafe",
+            "last_password_modification": "2019-10-03 14:44:49",
+            "bad_login": 0,
+            "created_at": "2019-10-03 14:44:49",
+            "updated_at": "2019-10-03 14:44:51"
+        }
+    },
+    "error_messages": [
+        []
+    ]
+}</code></pre>
+<blockquote>
+<p>Example response (400):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "content": [],
+    "error_messages": []
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET /confirmAccount/{link}</code></p>
+<!-- END_06f1c2988f7abe05be737c719394c0c4 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
